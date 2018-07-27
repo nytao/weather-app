@@ -1,7 +1,7 @@
 const request = require('request');
 
 exports.geocodeAddress = (address, callback) => {
-  var url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}`;
+  var url = `https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCM7Dt1ZYTMdDmWI3lxnrQB5qvhTNNMrww&address=${encodeURIComponent(address)}`;
   // console.log(url);
   request({
     url,

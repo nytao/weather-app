@@ -17,14 +17,11 @@ exports.getWeather = (location) => {
       } else if (response.statusCode !== 200) {
         reject('Connection error!');
       } else {
-        resolve(body);
+        resolve({
+          temperature: body.currently.temperature,
+          apparentTemperature: body.currently.apparentTemperature
+        });
       }
     });
-  })
-  .then((data) => {
-    console.log(`The temperature is ${data.currently.temperature}, and it feels like ${data.currently.apparentTemperature}.`);
-  })
-  .catch((err) => {
-    console.log(err);
   });
 };

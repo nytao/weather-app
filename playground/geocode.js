@@ -1,5 +1,5 @@
 const request = require('request');
-const weather = require('./weather');
+// const weather = require('./weather');
 
 exports.geocodeAddress = (address) => {
   return new Promise((resolve, reject) => {
@@ -23,11 +23,5 @@ exports.geocodeAddress = (address) => {
       }
       // console.log('synchronous');
     });
-  })
-  .then((location) => {
-    weather.getWeather(location);
-  })
-  .catch((err) => {
-    console.log(err);
   });
 };

@@ -13,8 +13,9 @@ exports.geocodeAddress = (address) => {
       } else if (body.status === 'ZERO_RESULTS') {
         reject('Zero results!');
       } else if (body.status === 'OK') {
-        console.log(body.results[0].formatted_address);
+        // console.log(body.results[0].formatted_address);
         resolve({
+          address: body.results[0].formatted_address,
           latitude: body.results[0].geometry.location.lat,
           longitude: body.results[0].geometry.location.lng
         });

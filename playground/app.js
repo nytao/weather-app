@@ -23,6 +23,7 @@ geocode
   .geocodeAddress(argv.address)
   .then((location) => {
     // console.log(JSON.stringify(location, null, 2));
+    console.log(location.address);
     return weather.getWeather(location);
   })
   .then((data) => {
@@ -32,3 +33,5 @@ geocode
   .catch((err) => {
     console.log(err);
   });
+
+console.log('hello world');

@@ -1,7 +1,6 @@
 
 const request = require('request');
 
-
 exports.getWeather = (location, callback) => {
   var apiURL = `https://api.darksky.net/forecast/f49218caa0b2b52d14dfa45e0bca4302/${location.latitude},${location.longitude}`;
   request({
